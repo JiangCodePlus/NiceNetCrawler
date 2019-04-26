@@ -35,7 +35,7 @@ class BrowserWebCrawler(object):
 
         :param start_url: Initial address.
         :param dir_path: Path to save.
-        :param web_driver_path: Headless browser's native address.
+        :param web_driver_path: Headless NiceNetCrawler's native address.
         :param wait_time: Wait time.
         """
 
@@ -67,13 +67,13 @@ class BrowserWebCrawler(object):
 
     def __initDriver(self, web_driver_path):
         """
-        Initialize headless browser.
+        Initialize headless NiceNetCrawler.
 
-        :param web_driver_path: Headless browser's native address.
-        :return: Headless browser instance.
+        :param web_driver_path: Headless NiceNetCrawler's native address.
+        :return: Headless NiceNetCrawler instance.
         """
         chrome_options = Options()
-        chrome_options.add_argument('--headless')  # Set the browser to headless
+        chrome_options.add_argument('--headless')  # Set the NiceNetCrawler to headless
         return webdriver.Chrome(chrome_options=chrome_options, executable_path=web_driver_path)
 
     def __parseImg(self, img, index):
@@ -154,7 +154,6 @@ class BrowserWebCrawler(object):
         self.__parseImg(img_element, index)  # Parse and save begin image of each chapter.
         self.__chapter_number += 1  # Chapter number add 1.
         self.__page_number = 1  # Page number restored to 1.
-        next_chapter_element.click()  # Click next chapter.
 
     def isGoNext(self, driver):
         """ Conditions of whether jump to next chapter."""

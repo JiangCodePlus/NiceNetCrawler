@@ -3,7 +3,7 @@
 @author JPlus
 @created 2019/4/25
 """
-from browser.img_browser_crawler import BrowserWebCrawler
+from NiceNetCrawler.browser.img_crawler import BrowserWebCrawler
 
 
 class netcrawler(BrowserWebCrawler):
@@ -27,8 +27,8 @@ class netcrawler(BrowserWebCrawler):
 
 
 if __name__ == "__main__":
-    init_url = "https://www.manhualou.com/manhua/4907/312548.html"
-    dir_path = r"C:\Users\Administrator.PC-20180314KCTP\Desktop\hyxhn"
+    init_url = "https://www.manhualou.com/manhua/5926/197640.html"
+    dir_path = r"C:\Users\Administrator.PC-20180314KCTP\Desktop\yqcr"
     executable_path = r"C:\Users\Administrator.PC-20180314KCTP\AppData\Local\Programs\Python\Python36\selenium\chromedriver.exe"
     wait_time = 30
     net_work = netcrawler(init_url, dir_path, executable_path, wait_time)
